@@ -1,0 +1,583 @@
+/* styles.css - Redesigned to match BootstrapMade Personal Demo */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;700;900&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  color: #444444;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0a6eb4;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #149ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #0a6eb4;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Hero Section */
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("rita.jpg") center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#hero::before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-container h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero-container h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.profile-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.passport-photo {
+  width: 180px;
+  height: 220px;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  margin: 20px auto;
+  display: block;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.image-label {
+  cursor: pointer;
+  display: block;
+}
+
+.image-label:hover .passport-photo {
+  border-color: #fff;
+  transform: scale(1.05);
+}
+
+/* Navigation */
+.main-nav {
+  margin-top: 30px;
+}
+
+.main-nav .nav-link {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 25px;
+  margin: 0 10px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 15px;
+  border: 2px solid transparent;
+}
+
+.main-nav .nav-link i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.main-nav .nav-link:hover {
+  background: #149ddd;
+  border-color: #149ddd;
+}
+
+/* Sections */
+.schools-section,
+.hobbies-section,
+.experience-section {
+  padding: 80px 0;
+}
+
+.section-box {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.section-box:hover {
+  box-shadow: 0px 0 35px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #050d18;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+/* Schools Grid */
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.school-card {
+  background: #f8fbfe;
+  border: 1px solid #e6f0ff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.school-card i {
+  font-size: 48px;
+  color: #149ddd;
+  margin-bottom: 20px;
+}
+
+.school-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #149ddd;
+}
+
+.school-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #050d18;
+  margin-bottom: 8px;
+}
+
+.school-level {
+  font-size: 14px;
+  color: #149ddd;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hobbies Grid */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.hobby-item {
+  background: #f8fbfe;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.hobby-item i {
+  font-size: 42px;
+  color: #149ddd;
+  margin-bottom: 15px;
+}
+
+.hobby-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #050d18;
+}
+
+.hobby-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #e7f1fd;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #fff;
+  border: 4px solid #149ddd;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -10px;
+}
+
+.timeline-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -25px;
+  background-color: #149ddd;
+  border: 4px solid #fff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.right .timeline-icon {
+  left: -25px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+
+.company {
+  font-size: 14px;
+  color: #149ddd;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+  background: #050d18;
+  text-align: center;
+}
+
+footer .container {
+  border-top: 1px solid #1a2a3d;
+  padding-top: 20px;
+}
+
+/* Popup */
+.popup-checkbox {
+  display: none;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.popup-checkbox:checked ~ .popup-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  animation: popupZoom 0.4s ease;
+}
+
+.popup-image {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(20, 157, 221, 0.5);
+}
+
+.popup-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-close:hover {
+  color: #149ddd;
+  transform: scale(1.2);
+}
+
+@keyframes popupZoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-container h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  
+  .hero-container h2 {
+    font-size: 20px;
+  }
+  
+  .main-nav .nav-link {
+    margin: 5px;
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  
+  .schools-grid,
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item::after {
+    left: 21px;
+  }
+  
+  .right {
+    left: 0%;
+  }
+  
+  .right .timeline-icon {
+    left: 6px;
+  }
+  
+  .timeline-icon {
+    left: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 100vh;
+  }
+  
+  .hero-container h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  
+  .hero-container h2 {
+    font-size: 18px;
+  }
+  
+  .profile-box {
+    padding: 30px 20px;
+  }
+  
+  .passport-photo {
+    width: 150px;
+    height: 180px;
+  }
+  
+  .section-box {
+    padding: 40px 25px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-container h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .hero-container h2 {
+    font-size: 16px;
+  }
+  
+  .main-nav .nav-link {
+    display: block;
+    margin: 8px 0;
+    width: 100%;
+  }
+  
+  .passport-photo {
+    width: 130px;
+    height: 160px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .school-card,
+  .hobby-item {
+    padding: 20px;
+  }
+}
